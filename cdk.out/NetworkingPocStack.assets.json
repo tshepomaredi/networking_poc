@@ -1,0 +1,34 @@
+{
+  "version": "38.0.1",
+  "files": {
+    "ee7de53d64cc9d6248fa6aa550f92358f6c907b5efd6f3298aeab1b5e7ea358a": {
+      "source": {
+        "path": "asset.ee7de53d64cc9d6248fa6aa550f92358f6c907b5efd6f3298aeab1b5e7ea358a",
+        "packaging": "zip"
+      },
+      "destinations": {
+        "241533144156-us-east-1": {
+          "bucketName": "cdk-hnb659fds-assets-241533144156-us-east-1",
+          "objectKey": "ee7de53d64cc9d6248fa6aa550f92358f6c907b5efd6f3298aeab1b5e7ea358a.zip",
+          "region": "us-east-1",
+          "assumeRoleArn": "arn:${AWS::Partition}:iam::241533144156:role/cdk-hnb659fds-file-publishing-role-241533144156-us-east-1"
+        }
+      }
+    },
+    "863e109c19dd5f64c68986b0ff9368035a999573c89a12cd8a846bc0944d8e3b": {
+      "source": {
+        "path": "NetworkingPocStack.template.json",
+        "packaging": "file"
+      },
+      "destinations": {
+        "241533144156-us-east-1": {
+          "bucketName": "cdk-hnb659fds-assets-241533144156-us-east-1",
+          "objectKey": "863e109c19dd5f64c68986b0ff9368035a999573c89a12cd8a846bc0944d8e3b.json",
+          "region": "us-east-1",
+          "assumeRoleArn": "arn:${AWS::Partition}:iam::241533144156:role/cdk-hnb659fds-file-publishing-role-241533144156-us-east-1"
+        }
+      }
+    }
+  },
+  "dockerImages": {}
+}

@@ -1,0 +1,32 @@
+digraph INFRA {
+  node [ color = "black", fillcolor = "#E6E6E6", height =1, style = "filled,bold,rounded", fontname = "Arial" ];
+  "VPCA" [ label = "VPCA
+(AWS::EC2::VPC)" ];
+  "VPCB" [ label = "VPCB
+(AWS::EC2::VPC)" ];
+  "VPCC" [ label = "VPCC
+(AWS::EC2::VPC)" ];
+  "VPCASG" [ label = "VPCASG
+(AWS::EC2::SecurityGroup)" ];
+  "VPCBSG" [ label = "VPCBSG
+(AWS::EC2::SecurityGroup)" ];
+  "VPCCSG" [ label = "VPCCSG
+(AWS::EC2::SecurityGroup)" ];
+  "VPCAEC2Instance" [ label = "VPCAEC2Instance
+(AWS::EC2::Instance)", shape =rectangle, fillcolor = "#B7E0FF" ];
+  "VPCBEC2Instance" [ label = "VPCBEC2Instance
+(AWS::EC2::Instance)", shape =rectangle, fillcolor = "#B7E0FF" ];
+  "VPCCEC2Instance" [ label = "VPCCEC2Instance
+(AWS::EC2::Instance)", shape =rectangle, fillcolor = "#B7E0FF" ];
+  "MyKeyPair" [ label = "MyKeyPair
+(AWS::EC2::KeyPair)", shape =rectangle ];
+  "VPCASG" -> "VPCA";
+  "VPCBSG" -> "VPCB";
+  "VPCCSG" -> "VPCC";
+  "VPCAEC2Instance" -> "VPCA";
+  "VPCAEC2Instance" -> "VPCASG";
+  "VPCBEC2Instance" -> "VPCB";
+  "VPCBEC2Instance" -> "VPCBSG";
+  "VPCCEC2Instance" -> "VPCC";
+  "VPCCEC2Instance" -> "VPCCSG";
+}

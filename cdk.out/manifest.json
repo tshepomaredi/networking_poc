@@ -1,0 +1,606 @@
+{
+  "version": "38.0.1",
+  "artifacts": {
+    "NetworkingPocStack.assets": {
+      "type": "cdk:asset-manifest",
+      "properties": {
+        "file": "NetworkingPocStack.assets.json",
+        "requiresBootstrapStackVersion": 6,
+        "bootstrapStackVersionSsmParameter": "/cdk-bootstrap/hnb659fds/version"
+      }
+    },
+    "NetworkingPocStack": {
+      "type": "aws:cloudformation:stack",
+      "environment": "aws://241533144156/us-east-1",
+      "properties": {
+        "templateFile": "NetworkingPocStack.template.json",
+        "terminationProtection": false,
+        "validateOnSynth": false,
+        "notificationArns": [],
+        "assumeRoleArn": "arn:${AWS::Partition}:iam::241533144156:role/cdk-hnb659fds-deploy-role-241533144156-us-east-1",
+        "cloudFormationExecutionRoleArn": "arn:${AWS::Partition}:iam::241533144156:role/cdk-hnb659fds-cfn-exec-role-241533144156-us-east-1",
+        "stackTemplateAssetObjectUrl": "s3://cdk-hnb659fds-assets-241533144156-us-east-1/863e109c19dd5f64c68986b0ff9368035a999573c89a12cd8a846bc0944d8e3b.json",
+        "requiresBootstrapStackVersion": 6,
+        "bootstrapStackVersionSsmParameter": "/cdk-bootstrap/hnb659fds/version",
+        "additionalDependencies": [
+          "NetworkingPocStack.assets"
+        ],
+        "lookupRole": {
+          "arn": "arn:${AWS::Partition}:iam::241533144156:role/cdk-hnb659fds-lookup-role-241533144156-us-east-1",
+          "requiresBootstrapStackVersion": 8,
+          "bootstrapStackVersionSsmParameter": "/cdk-bootstrap/hnb659fds/version"
+        }
+      },
+      "dependencies": [
+        "NetworkingPocStack.assets"
+      ],
+      "metadata": {
+        "/NetworkingPocStack/MyKeyPair/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "MyKeyPair659209CA"
+          }
+        ],
+        "/NetworkingPocStack/NetworkPOC-keypair": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "NetworkPOCkeypair"
+          }
+        ],
+        "/NetworkingPocStack/VPCA/VPCAVPC/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "VPCAVPCAVPCB8053131"
+          }
+        ],
+        "/NetworkingPocStack/VPCA/VPCAVPC/PublicSubnet1/Subnet": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "VPCAVPCAVPCPublicSubnet1Subnet8BC236C3"
+          }
+        ],
+        "/NetworkingPocStack/VPCA/VPCAVPC/PublicSubnet1/RouteTable": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "VPCAVPCAVPCPublicSubnet1RouteTable92FD4BA5"
+          }
+        ],
+        "/NetworkingPocStack/VPCA/VPCAVPC/PublicSubnet1/RouteTableAssociation": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "VPCAVPCAVPCPublicSubnet1RouteTableAssociationAB3680A2"
+          }
+        ],
+        "/NetworkingPocStack/VPCA/VPCAVPC/PublicSubnet1/DefaultRoute": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "VPCAVPCAVPCPublicSubnet1DefaultRouteCB9DD1CF"
+          }
+        ],
+        "/NetworkingPocStack/VPCA/VPCAVPC/PublicSubnet1/EIP": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "VPCAVPCAVPCPublicSubnet1EIP09B40E72"
+          }
+        ],
+        "/NetworkingPocStack/VPCA/VPCAVPC/PublicSubnet1/NATGateway": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "VPCAVPCAVPCPublicSubnet1NATGatewayD32103F6"
+          }
+        ],
+        "/NetworkingPocStack/VPCA/VPCAVPC/PublicSubnet2/Subnet": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "VPCAVPCAVPCPublicSubnet2Subnet5C88AA11"
+          }
+        ],
+        "/NetworkingPocStack/VPCA/VPCAVPC/PublicSubnet2/RouteTable": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "VPCAVPCAVPCPublicSubnet2RouteTable0402A6C5"
+          }
+        ],
+        "/NetworkingPocStack/VPCA/VPCAVPC/PublicSubnet2/RouteTableAssociation": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "VPCAVPCAVPCPublicSubnet2RouteTableAssociationFFC6C61A"
+          }
+        ],
+        "/NetworkingPocStack/VPCA/VPCAVPC/PublicSubnet2/DefaultRoute": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "VPCAVPCAVPCPublicSubnet2DefaultRouteB73E1561"
+          }
+        ],
+        "/NetworkingPocStack/VPCA/VPCAVPC/PrivateSubnet1/Subnet": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "VPCAVPCAVPCPrivateSubnet1SubnetAE0A2BFE"
+          }
+        ],
+        "/NetworkingPocStack/VPCA/VPCAVPC/PrivateSubnet1/RouteTable": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "VPCAVPCAVPCPrivateSubnet1RouteTable286AFCAE"
+          }
+        ],
+        "/NetworkingPocStack/VPCA/VPCAVPC/PrivateSubnet1/RouteTableAssociation": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "VPCAVPCAVPCPrivateSubnet1RouteTableAssociationCCF19A18"
+          }
+        ],
+        "/NetworkingPocStack/VPCA/VPCAVPC/PrivateSubnet1/DefaultRoute": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "VPCAVPCAVPCPrivateSubnet1DefaultRouteEAC89DF4"
+          }
+        ],
+        "/NetworkingPocStack/VPCA/VPCAVPC/PrivateSubnet2/Subnet": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "VPCAVPCAVPCPrivateSubnet2Subnet4D2E20C4"
+          }
+        ],
+        "/NetworkingPocStack/VPCA/VPCAVPC/PrivateSubnet2/RouteTable": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "VPCAVPCAVPCPrivateSubnet2RouteTable4E861B30"
+          }
+        ],
+        "/NetworkingPocStack/VPCA/VPCAVPC/PrivateSubnet2/RouteTableAssociation": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "VPCAVPCAVPCPrivateSubnet2RouteTableAssociation2B4074BB"
+          }
+        ],
+        "/NetworkingPocStack/VPCA/VPCAVPC/PrivateSubnet2/DefaultRoute": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "VPCAVPCAVPCPrivateSubnet2DefaultRoute8958FFEC"
+          }
+        ],
+        "/NetworkingPocStack/VPCA/VPCAVPC/IGW": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "VPCAVPCAVPCIGW50D96639"
+          }
+        ],
+        "/NetworkingPocStack/VPCA/VPCAVPC/VPCGW": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "VPCAVPCAVPCVPCGW168BF573"
+          }
+        ],
+        "/NetworkingPocStack/VPCA/VPCAVPC/RestrictDefaultSecurityGroupCustomResource/Default": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "VPCAVPCAVPCRestrictDefaultSecurityGroupCustomResource49290AC6"
+          }
+        ],
+        "/NetworkingPocStack/VPCA/VPCASG/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "VPCAVPCASG40D71DC0"
+          }
+        ],
+        "/NetworkingPocStack/VPCA/VPCAEC2Instance/InstanceRole/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "VPCAVPCAEC2InstanceInstanceRole9C93C079"
+          }
+        ],
+        "/NetworkingPocStack/VPCA/VPCAEC2Instance/InstanceProfile": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "VPCAVPCAEC2InstanceInstanceProfileE837D959"
+          }
+        ],
+        "/NetworkingPocStack/VPCA/VPCAEC2Instance/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "VPCAVPCAEC2Instance834A30FC"
+          }
+        ],
+        "/NetworkingPocStack/Custom::VpcRestrictDefaultSGCustomResourceProvider": [
+          {
+            "type": "aws:cdk:is-custom-resource-handler-customResourceProvider",
+            "data": true
+          }
+        ],
+        "/NetworkingPocStack/Custom::VpcRestrictDefaultSGCustomResourceProvider/Role": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "CustomVpcRestrictDefaultSGCustomResourceProviderRole26592FE0"
+          }
+        ],
+        "/NetworkingPocStack/Custom::VpcRestrictDefaultSGCustomResourceProvider/Handler": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "CustomVpcRestrictDefaultSGCustomResourceProviderHandlerDC833E5E"
+          }
+        ],
+        "/NetworkingPocStack/SsmParameterValue:--aws--service--ami-amazon-linux-latest--amzn2-ami-kernel-5.10-hvm-x86_64-gp2:C96584B6-F00A-464E-AD19-53AFF4B05118.Parameter": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "SsmParameterValueawsserviceamiamazonlinuxlatestamzn2amikernel510hvmx8664gp2C96584B6F00A464EAD1953AFF4B05118Parameter"
+          }
+        ],
+        "/NetworkingPocStack/VPCAID": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "VPCAID"
+          }
+        ],
+        "/NetworkingPocStack/EC2InstanceAID": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "EC2InstanceAID"
+          }
+        ],
+        "/NetworkingPocStack/VPCB/VPCBVPC/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "VPCBVPCBVPC49329355"
+          }
+        ],
+        "/NetworkingPocStack/VPCB/VPCBVPC/PublicSubnet1/Subnet": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "VPCBVPCBVPCPublicSubnet1SubnetFA38B43F"
+          }
+        ],
+        "/NetworkingPocStack/VPCB/VPCBVPC/PublicSubnet1/RouteTable": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "VPCBVPCBVPCPublicSubnet1RouteTableA7F6216A"
+          }
+        ],
+        "/NetworkingPocStack/VPCB/VPCBVPC/PublicSubnet1/RouteTableAssociation": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "VPCBVPCBVPCPublicSubnet1RouteTableAssociation20792443"
+          }
+        ],
+        "/NetworkingPocStack/VPCB/VPCBVPC/PublicSubnet1/DefaultRoute": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "VPCBVPCBVPCPublicSubnet1DefaultRoute72653E81"
+          }
+        ],
+        "/NetworkingPocStack/VPCB/VPCBVPC/PublicSubnet1/EIP": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "VPCBVPCBVPCPublicSubnet1EIP44C5AD18"
+          }
+        ],
+        "/NetworkingPocStack/VPCB/VPCBVPC/PublicSubnet1/NATGateway": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "VPCBVPCBVPCPublicSubnet1NATGateway3356005F"
+          }
+        ],
+        "/NetworkingPocStack/VPCB/VPCBVPC/PublicSubnet2/Subnet": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "VPCBVPCBVPCPublicSubnet2Subnet57203C88"
+          }
+        ],
+        "/NetworkingPocStack/VPCB/VPCBVPC/PublicSubnet2/RouteTable": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "VPCBVPCBVPCPublicSubnet2RouteTable8C18923E"
+          }
+        ],
+        "/NetworkingPocStack/VPCB/VPCBVPC/PublicSubnet2/RouteTableAssociation": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "VPCBVPCBVPCPublicSubnet2RouteTableAssociationF2327B31"
+          }
+        ],
+        "/NetworkingPocStack/VPCB/VPCBVPC/PublicSubnet2/DefaultRoute": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "VPCBVPCBVPCPublicSubnet2DefaultRoute4A257E63"
+          }
+        ],
+        "/NetworkingPocStack/VPCB/VPCBVPC/PrivateSubnet1/Subnet": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "VPCBVPCBVPCPrivateSubnet1Subnet80FF4740"
+          }
+        ],
+        "/NetworkingPocStack/VPCB/VPCBVPC/PrivateSubnet1/RouteTable": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "VPCBVPCBVPCPrivateSubnet1RouteTable57D4021E"
+          }
+        ],
+        "/NetworkingPocStack/VPCB/VPCBVPC/PrivateSubnet1/RouteTableAssociation": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "VPCBVPCBVPCPrivateSubnet1RouteTableAssociation76C9A753"
+          }
+        ],
+        "/NetworkingPocStack/VPCB/VPCBVPC/PrivateSubnet1/DefaultRoute": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "VPCBVPCBVPCPrivateSubnet1DefaultRoute645C0152"
+          }
+        ],
+        "/NetworkingPocStack/VPCB/VPCBVPC/PrivateSubnet2/Subnet": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "VPCBVPCBVPCPrivateSubnet2Subnet8CE08C16"
+          }
+        ],
+        "/NetworkingPocStack/VPCB/VPCBVPC/PrivateSubnet2/RouteTable": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "VPCBVPCBVPCPrivateSubnet2RouteTableD26C1BE6"
+          }
+        ],
+        "/NetworkingPocStack/VPCB/VPCBVPC/PrivateSubnet2/RouteTableAssociation": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "VPCBVPCBVPCPrivateSubnet2RouteTableAssociationCDB86989"
+          }
+        ],
+        "/NetworkingPocStack/VPCB/VPCBVPC/PrivateSubnet2/DefaultRoute": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "VPCBVPCBVPCPrivateSubnet2DefaultRoute71890072"
+          }
+        ],
+        "/NetworkingPocStack/VPCB/VPCBVPC/IGW": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "VPCBVPCBVPCIGW50489594"
+          }
+        ],
+        "/NetworkingPocStack/VPCB/VPCBVPC/VPCGW": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "VPCBVPCBVPCVPCGW24EB3135"
+          }
+        ],
+        "/NetworkingPocStack/VPCB/VPCBVPC/RestrictDefaultSecurityGroupCustomResource/Default": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "VPCBVPCBVPCRestrictDefaultSecurityGroupCustomResource2141CAFD"
+          }
+        ],
+        "/NetworkingPocStack/VPCB/VPCBSG/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "VPCBVPCBSGF1616022"
+          }
+        ],
+        "/NetworkingPocStack/VPCB/VPCBEC2Instance/InstanceRole/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "VPCBVPCBEC2InstanceInstanceRoleEA1DFBB6"
+          }
+        ],
+        "/NetworkingPocStack/VPCB/VPCBEC2Instance/InstanceProfile": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "VPCBVPCBEC2InstanceInstanceProfile523F0DF9"
+          }
+        ],
+        "/NetworkingPocStack/VPCB/VPCBEC2Instance/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "VPCBVPCBEC2InstanceC857C0FC"
+          }
+        ],
+        "/NetworkingPocStack/VPCBID": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "VPCBID"
+          }
+        ],
+        "/NetworkingPocStack/EC2InstanceBID": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "EC2InstanceBID"
+          }
+        ],
+        "/NetworkingPocStack/VPCC/VPCCVPC/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "VPCCVPCCVPCC7FC8284"
+          }
+        ],
+        "/NetworkingPocStack/VPCC/VPCCVPC/PublicSubnet1/Subnet": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "VPCCVPCCVPCPublicSubnet1Subnet48E89F22"
+          }
+        ],
+        "/NetworkingPocStack/VPCC/VPCCVPC/PublicSubnet1/RouteTable": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "VPCCVPCCVPCPublicSubnet1RouteTable5CDFF651"
+          }
+        ],
+        "/NetworkingPocStack/VPCC/VPCCVPC/PublicSubnet1/RouteTableAssociation": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "VPCCVPCCVPCPublicSubnet1RouteTableAssociationA277D1DF"
+          }
+        ],
+        "/NetworkingPocStack/VPCC/VPCCVPC/PublicSubnet1/DefaultRoute": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "VPCCVPCCVPCPublicSubnet1DefaultRoute34FD35A1"
+          }
+        ],
+        "/NetworkingPocStack/VPCC/VPCCVPC/PublicSubnet1/EIP": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "VPCCVPCCVPCPublicSubnet1EIP32DD77E3"
+          }
+        ],
+        "/NetworkingPocStack/VPCC/VPCCVPC/PublicSubnet1/NATGateway": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "VPCCVPCCVPCPublicSubnet1NATGateway1505AE92"
+          }
+        ],
+        "/NetworkingPocStack/VPCC/VPCCVPC/PublicSubnet2/Subnet": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "VPCCVPCCVPCPublicSubnet2Subnet365BC9CE"
+          }
+        ],
+        "/NetworkingPocStack/VPCC/VPCCVPC/PublicSubnet2/RouteTable": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "VPCCVPCCVPCPublicSubnet2RouteTable8DFE8856"
+          }
+        ],
+        "/NetworkingPocStack/VPCC/VPCCVPC/PublicSubnet2/RouteTableAssociation": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "VPCCVPCCVPCPublicSubnet2RouteTableAssociationFCB8EA43"
+          }
+        ],
+        "/NetworkingPocStack/VPCC/VPCCVPC/PublicSubnet2/DefaultRoute": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "VPCCVPCCVPCPublicSubnet2DefaultRouteE0B91668"
+          }
+        ],
+        "/NetworkingPocStack/VPCC/VPCCVPC/PrivateSubnet1/Subnet": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "VPCCVPCCVPCPrivateSubnet1Subnet9E643F7F"
+          }
+        ],
+        "/NetworkingPocStack/VPCC/VPCCVPC/PrivateSubnet1/RouteTable": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "VPCCVPCCVPCPrivateSubnet1RouteTableA918559E"
+          }
+        ],
+        "/NetworkingPocStack/VPCC/VPCCVPC/PrivateSubnet1/RouteTableAssociation": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "VPCCVPCCVPCPrivateSubnet1RouteTableAssociationEC97D8CD"
+          }
+        ],
+        "/NetworkingPocStack/VPCC/VPCCVPC/PrivateSubnet1/DefaultRoute": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "VPCCVPCCVPCPrivateSubnet1DefaultRoute7C7D7FDC"
+          }
+        ],
+        "/NetworkingPocStack/VPCC/VPCCVPC/PrivateSubnet2/Subnet": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "VPCCVPCCVPCPrivateSubnet2Subnet348ECAA7"
+          }
+        ],
+        "/NetworkingPocStack/VPCC/VPCCVPC/PrivateSubnet2/RouteTable": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "VPCCVPCCVPCPrivateSubnet2RouteTableB5D71929"
+          }
+        ],
+        "/NetworkingPocStack/VPCC/VPCCVPC/PrivateSubnet2/RouteTableAssociation": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "VPCCVPCCVPCPrivateSubnet2RouteTableAssociation7B576938"
+          }
+        ],
+        "/NetworkingPocStack/VPCC/VPCCVPC/PrivateSubnet2/DefaultRoute": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "VPCCVPCCVPCPrivateSubnet2DefaultRoute0B7DF068"
+          }
+        ],
+        "/NetworkingPocStack/VPCC/VPCCVPC/IGW": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "VPCCVPCCVPCIGWC5B9D3D3"
+          }
+        ],
+        "/NetworkingPocStack/VPCC/VPCCVPC/VPCGW": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "VPCCVPCCVPCVPCGWBD4D22AC"
+          }
+        ],
+        "/NetworkingPocStack/VPCC/VPCCVPC/RestrictDefaultSecurityGroupCustomResource/Default": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "VPCCVPCCVPCRestrictDefaultSecurityGroupCustomResource7037EAEB"
+          }
+        ],
+        "/NetworkingPocStack/VPCC/VPCCSG/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "VPCCVPCCSGB6D2AF97"
+          }
+        ],
+        "/NetworkingPocStack/VPCC/VPCCEC2Instance/InstanceRole/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "VPCCVPCCEC2InstanceInstanceRoleBD08D8D2"
+          }
+        ],
+        "/NetworkingPocStack/VPCC/VPCCEC2Instance/InstanceProfile": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "VPCCVPCCEC2InstanceInstanceProfile8AFA7C80"
+          }
+        ],
+        "/NetworkingPocStack/VPCC/VPCCEC2Instance/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "VPCCVPCCEC2Instance19BD539B"
+          }
+        ],
+        "/NetworkingPocStack/VPCCID": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "VPCCID"
+          }
+        ],
+        "/NetworkingPocStack/EC2InstanceCID": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "EC2InstanceCID"
+          }
+        ],
+        "/NetworkingPocStack/CDKMetadata/Default": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "CDKMetadata"
+          }
+        ],
+        "/NetworkingPocStack/BootstrapVersion": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "BootstrapVersion"
+          }
+        ],
+        "/NetworkingPocStack/CheckBootstrapVersion": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "CheckBootstrapVersion"
+          }
+        ]
+      },
+      "displayName": "NetworkingPocStack"
+    },
+    "Tree": {
+      "type": "cdk:tree",
+      "properties": {
+        "file": "tree.json"
+      }
+    }
+  }
+}
