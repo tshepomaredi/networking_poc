@@ -178,9 +178,4 @@ cdk deploy     # Deploy stack
 3. Monitoring:
 - Check CloudFormation console for deployment status
 - Monitor EC2 instance status in AWS Console
-- Verify VPC peering connections are active# networking_poc
-# networking_poc
-# networking_poc
-# networking_poc
-# networking_poc
-# networking_poc
+- Verify VPC peering connections are active
